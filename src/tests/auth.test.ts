@@ -2,10 +2,6 @@ import { IncomingHttpHeaders } from "http";
 import { getAPIKey } from "../api/auth.js";
 import { describe, expect, test } from "vitest";
 
-const headers = {
-  authorization: "ApiKey 123",
-};
-
 describe("getApiKey", () => {
   test("non existent auth header", () => {
     const person = getAPIKey({});
